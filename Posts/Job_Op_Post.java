@@ -1,9 +1,12 @@
+// this class inherits from the class post
 package Posts;
 
 public class Job_Op_Post extends Post {
     public String Job_title;
     public double Salary;
+//
    public Job_Op_Post(String job_title, double salary) {
+        super();// needs rework 
         this.Job_title = job_title;
         this.Salary = salary;
         // for date soon™
