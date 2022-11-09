@@ -9,6 +9,7 @@ public class Profile {
 
   
 
+   
     public Profile(String name, int age, String address, String email, String phone) 
     {
         this.name = name;
@@ -64,6 +65,11 @@ public class Profile {
         this.Address = address;
         this.Email = email;
         this.Phone = phone;
+    }
+    @Override
+    public String toString() {
+        return "Profile [name=" + name + ", Age=" + Age + ", Address=" + Address + ", Email=" + Email + ", Phone="
+                + Phone + "]";
     }
 
 }

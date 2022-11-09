@@ -23,7 +23,7 @@ public class myCareerApp {
         switch (choice) {
             case "1": // create account
                 System.out.println("please enter your username");
-                username = s.nextLine();
+                username= s.nextLine();
                 System.out.println("Please enter your password");
                  password = s.nextLine();
                 Account a = new Account(username,password);
@@ -34,8 +34,22 @@ public class myCareerApp {
                 username = s.nextLine();
                 System.out.println("Enter you password");
                 password = s.nextLine();
-                Account b = new Account(username, password);
-              System.out.println(b.authenticate(password, username)); 
+                a = new Account(username, password);
+                System.out.println(a.authenticate(password, username)); 
+                System.out.println("enter your information");
+                System.out.println("name ?");
+                String name = s.nextLine();
+                System.out.println("age ?");
+                int age = s.nextInt();
+                System.out.println("Address ?");
+                String Address = s.nextLine();
+                System.out.println("Email ?");
+                String Email = s.nextLine();
+                System.out.println("phone ?");
+                String Phone = s.nextLine();
+                Profile p = new Profile(name,age,Address,Email,Phone);
+                System.out.println(p.toString());
+
             break;
             default:
                 break;
