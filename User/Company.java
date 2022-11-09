@@ -1,12 +1,12 @@
 package User;
 
 public class Company {
-    public String name;
+    public String Name;
     public String Description;
     public String Activity;
     
     public Company(String name, String Description, String Activity){
-        this.name = name;
+        this.Name = name;
         this.Description = Description;
         this.Activity = Activity;
     }
@@ -23,9 +23,9 @@ public class Company {
         this.Activity = activity;
     }
     public String getName() {
-        return name;
+        return Name;
     }
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 }

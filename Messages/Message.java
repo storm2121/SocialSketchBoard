@@ -14,7 +14,7 @@ public class Message {
     }
 
     public void setMessage(String message) {
-        Message = message;
+        this.Message = message;
     }
     
 }

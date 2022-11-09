@@ -3,7 +3,7 @@ package User;
 public class Account {
     private String login;
     private String password;
-    
+    // constructor Account
     public Account(String login, String password) {
         this.login = login;
         this.password = password;
@@ -14,12 +14,14 @@ public class Account {
     public void setLogin(String login) {
         this.login = login;
     }
-    public String getPassword() {
+    public String getPass() {
         return password;
     }
+    //Method change password
     public void Change_Pass(String password) {
         this.password = password;
     }
+    // method Authenticate
     public boolean authenticate(String newPassword,String newLogin)
     {
         if((password.equals(newPassword)) && (login.equals(newLogin)))
@@ -27,6 +29,8 @@ public class Account {
             return true;
         }
         return false;
+
     }
+
 
 }
