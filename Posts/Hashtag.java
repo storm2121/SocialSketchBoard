@@ -16,4 +16,8 @@ public class Hashtag {
         Hashtag = hashtag;
     }
 
+    
+
+
+
 }
