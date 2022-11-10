@@ -4,7 +4,7 @@ public class Account {
     private String login;
     private String password;
     // constructor Account
-    public Account(String login, String password) {
+    public Account(String login , String password) { 
         this.login = login;
         this.password = password;
     }
@@ -24,7 +24,7 @@ public class Account {
     // method Authenticate
     public boolean authenticate(String newPassword,String newLogin)
     {
-        if((password == newPassword)&& (login == newLogin))
+        if((this.password.equals(newPassword))&& (this.login.equals(newLogin)))
         {
             return true;
         }

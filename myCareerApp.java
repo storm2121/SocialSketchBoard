@@ -10,6 +10,7 @@ public class myCareerApp {
         String password;
         Scanner s = new Scanner(System.in);
         String choice=null;
+        Account a = new Account("","");
         do{ 
         System.out.println("********************************************************");
         System.out.println("welcome to My Career APP");
@@ -17,37 +18,38 @@ public class myCareerApp {
         System.out.println("To Login enter 2");
         
         
-       
-        choice = s.nextLine();
-
+        
+        choice = s.next();
+        
         switch (choice) {
             case "1": // create account
-                System.out.println("please enter your username");
-                username= s.nextLine();
+            System.out.println("please enter your username");
+            username= s.next();
+            a.setLogin(username);
                 System.out.println("Please enter your password");
-                 password = s.nextLine();
-                Account a = new Account(username,password);
+                 password = s.next();
+                 a.Change_Pass(password);
+                System.out.println(a.toString());
                 System.out.println("Account successfully created");
                 break;
+
             case "2": // login
                 System.out.println("Enter your username");
-                username = s.nextLine();
+                username = s.next();
                 System.out.println("Enter you password");
-                password = s.nextLine();
-                Account b = new Account(username, password);
-                System.out.println("");
-                System.out.println(b.authenticate(password, username)); 
+                password = s.next();
+                System.out.println(a.authenticate(password, username)); 
                 System.out.println("enter your information");
                 System.out.println("name ?");
-                String name = s.nextLine();
+                String name = s.next();
                 System.out.println("age ?");
                 int age = s.nextInt();
                 System.out.println("Address ?");
-                String Address = s.nextLine();
+                String Address = s.next();
                 System.out.println("Email ?");
-                String Email = s.nextLine();
+                String Email = s.next();
                 System.out.println("phone ?");
-                String Phone = s.nextLine();
+                String Phone = s.next();
                 Profile p = new Profile(name,age,Address,Email,Phone);
                 System.out.println(p.toString());
 
