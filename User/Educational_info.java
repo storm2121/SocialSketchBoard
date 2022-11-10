@@ -11,7 +11,7 @@ public class Educational_info {
         this.Grad_year = grad_year;
     }
 
-   
+
     @Override
     public String toString() {
         return "Educational_info [latest_degree=" + latest_degree + ", Discipline=" + Discipline + ", Grad_year="
