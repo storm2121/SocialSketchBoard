@@ -1,3 +1,4 @@
+/* This program is only intended for 1 user only */
 import User.*;
 import Messages.*;
 import Notifications.*;
@@ -54,10 +55,19 @@ public class myCareerApp {
                 System.out.println(p.toString());
 
             break;
+            case "4":
+            System.out.println("Enter the message that you want to create");
+
+            String message = s.next();
+            Message user = new Message(message);
+            System.out.println(user.toString());
+            System.out.println("number of messages sent");
+           System.out.println(user.getCount());
+            
             default:
                 break;
         }
-       } while (choice!="3");
+       } while (choice!="0");
     }
 
    
