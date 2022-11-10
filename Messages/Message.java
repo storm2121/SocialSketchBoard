@@ -9,12 +9,15 @@ public class Message {
     // date = Date_time;
      public String Message;
 
-    public String getMessage() {
-        return Message;
+    public Message(String message) {
+        Message = message;
     }
 
-    public void setMessage(String message) {
-        this.Message = message;
+    @Override
+    public String toString() {
+        return "Message [Message=" + Message + "]";
     }
+
+   
     
 }

@@ -1,8 +1,15 @@
 package Messages;
 
 public class Inbox {
-// need methods
 
+    public void Search_message()
+        {
+
+        }
+    public void Sort_messages()
+    {
+        
+    }
     
     
 }

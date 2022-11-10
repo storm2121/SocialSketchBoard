@@ -24,13 +24,17 @@ public class Account {
     // method Authenticate
     public boolean authenticate(String newPassword,String newLogin)
     {
-        if((password.equals(newPassword)) && (login.equals(newLogin)))
+        if((password == newPassword)&& (login == newLogin))
         {
             return true;
         }
         else 
         return false;
-
+        
+    }
+    @Override
+    public String toString() {
+        return "Account [login=" + login + ", password=" + password + "]";
     }
 
 

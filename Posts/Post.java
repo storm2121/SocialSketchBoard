@@ -8,12 +8,12 @@ public class Post {
     public Post(String post) {
         this.Post = post;
     }
-    public String getPost() {
-        return Post;
-    }
 
-    public void setPost(String post) {
-        this.Post = post;
+
+    @Override
+    public String toString() {
+        return "Post [Post=" + Post + "]";
     }
+    
     
 }

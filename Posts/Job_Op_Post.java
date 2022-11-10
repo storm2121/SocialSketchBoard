@@ -11,21 +11,11 @@ public class Job_Op_Post extends Post {
         // for date soon™
     }
     // public start date
-    public String getJob_title() {
-        return Job_title;
-    }
-    public void setJob_title(String job_title) {
-        this.Job_title = job_title;
-    }
-    public double getSalary() {
-        return Salary;
-    }
-    public void setSalary(double salary) {
-        this.Salary = salary;
-    }
-    @Override
-    public String toString() {
-        return "Job_Op_Post [job_title=" + Job_title + ", salary=" + Salary + ", post=" + Post + ", getJob_title()="
-                + getJob_title() + ", getSalary()=" + getSalary() + ", toString()=" + super.toString() + "]";
-    }
+
+@Override
+public String toString() {
+    return "Job_Op_Post [Job_title=" + Job_title + ", Salary=" + Salary + "]";
+}
+   
+   
 }

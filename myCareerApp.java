@@ -34,8 +34,9 @@ public class myCareerApp {
                 username = s.nextLine();
                 System.out.println("Enter you password");
                 password = s.nextLine();
-                a = new Account(username, password);
-                System.out.println(a.authenticate(password, username)); 
+                Account b = new Account(username, password);
+                System.out.println("");
+                System.out.println(b.authenticate(password, username)); 
                 System.out.println("enter your information");
                 System.out.println("name ?");
                 String name = s.nextLine();
@@ -56,5 +57,6 @@ public class myCareerApp {
         }
        } while (choice!="3");
     }
+
    
 }
