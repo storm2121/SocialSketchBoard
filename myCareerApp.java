@@ -4,6 +4,7 @@ import Messages.*;
 import Notifications.*;
 import Posts.*;
 import java.util.*;
+import java.util.GregorianCalendar;
 public class myCareerApp {
     public static void main(String[] args)
     {
@@ -12,11 +13,13 @@ public class myCareerApp {
         Scanner s = new Scanner(System.in);
         String choice=null;
         Account a = new Account("","");
+        GregorianCalendar Date = new GregorianCalendar();
         do{ 
         System.out.println("********************************************************");
         System.out.println("welcome to My Career APP");
         System.out.println("To Create an an Account enter 1");
         System.out.println("To Login enter 2");
+        System.out.println("to create a message enter 3");
         
         
         
@@ -55,14 +58,13 @@ public class myCareerApp {
                 System.out.println(p.toString());
 
             break;
-            case "4":
+            case "3":
             System.out.println("Enter the message that you want to create");
-
             String message = s.next();
-            Message user = new Message(message);
+            Message user = new Message(message,Date);
             System.out.println(user.toString());
             System.out.println("number of messages sent");
-           System.out.println(user.getCount());
+           
             
             default:
                 break;

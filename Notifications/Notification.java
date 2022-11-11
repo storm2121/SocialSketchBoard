@@ -1,11 +1,14 @@
 package Notifications;
 
+import java.util.GregorianCalendar;
+
 public class Notification {
-    
+    GregorianCalendar Date = new GregorianCalendar();
     public String text;
 
-    public Notification(String text) {
+    public Notification(String text,GregorianCalendar Date) {
         this.text = text;
+        this.Date = Date;
     }
 
     @Override
