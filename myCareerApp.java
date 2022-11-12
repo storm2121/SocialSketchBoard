@@ -8,10 +8,11 @@ import java.util.GregorianCalendar;
 public class myCareerApp {
 
     public static void main(String[] args)
-    {
+    {  
+        Scanner s = new Scanner(System.in);
         String username;
         String password;
-        Scanner s = new Scanner(System.in);
+        boolean hu;
         String choice;
         Account a = new Account("","");
         GregorianCalendar Date = new GregorianCalendar();
@@ -43,7 +44,13 @@ public class myCareerApp {
                 username = s.next();
                 System.out.println("Enter you password");
                 password = s.next();
-                System.out.println(a.authenticate(password, username)); 
+                hu = a.authenticate(password, username);
+                if(hu != true)
+                {
+                    System.out.println("repeat again password and username is incorrect");
+                    break;
+
+                }
                 System.out.println("enter your information");
                 System.out.println("name ?");
                 String name = s.next();
@@ -64,7 +71,10 @@ public class myCareerApp {
             String message = s.next();
             Message user = new Message(message,Date);
             System.out.println(user);
+            case "4":
+            System.out.println("enter your Updated info ");
 
+            break;
            
             
             default:
