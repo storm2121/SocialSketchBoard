@@ -29,11 +29,11 @@ public class myCareerApp {
         switch (choice) {
             case "1": // create account
             System.out.println("please enter your username");
-            username= s.next();
-            a.setLogin(username);
+
+            a.setLogin(s.next());
                 System.out.println("Please enter your password");
-                 password = s.next();
-                 a.Change_Pass(password);
+
+                 a.Change_Pass(s.next());
                 System.out.println(a);
                 System.out.println("Account successfully created");
                 break;
