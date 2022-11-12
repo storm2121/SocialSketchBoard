@@ -6,12 +6,13 @@ import Posts.*;
 import java.util.*;
 import java.util.GregorianCalendar;
 public class myCareerApp {
+
     public static void main(String[] args)
     {
         String username;
         String password;
         Scanner s = new Scanner(System.in);
-        String choice=null;
+        String choice;
         Account a = new Account("","");
         GregorianCalendar Date = new GregorianCalendar();
         do{ 
@@ -33,7 +34,7 @@ public class myCareerApp {
                 System.out.println("Please enter your password");
                  password = s.next();
                  a.Change_Pass(password);
-                System.out.println(a.toString());
+                System.out.println(a);
                 System.out.println("Account successfully created");
                 break;
 
@@ -55,21 +56,21 @@ public class myCareerApp {
                 System.out.println("phone ?");
                 String Phone = s.next();
                 Profile p = new Profile(name,age,Address,Email,Phone);
-                System.out.println(p.toString());
+                System.out.println(p);
 
             break;
             case "3":
             System.out.println("Enter the message that you want to create");
             String message = s.next();
             Message user = new Message(message,Date);
-            System.out.println(user.toString());
-            System.out.println("number of messages sent");
+            System.out.println(user);
+
            
             
             default:
                 break;
         }
-       } while (choice!="0");
+       } while (!choice.equals("0"));
     }
 
    
