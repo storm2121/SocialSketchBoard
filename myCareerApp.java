@@ -12,7 +12,11 @@ public class myCareerApp {
         Scanner s = new Scanner(System.in);
         String username;
         String password;
-        boolean hu;
+        String name = "";
+        int age = 0;
+        String Address = "";
+        String Email = "";
+        String Phone = "";
         String choice;
         Account a = new Account("","");
         GregorianCalendar Date = new GregorianCalendar();
@@ -40,30 +44,69 @@ public class myCareerApp {
                 break;
 
             case "2": // login
+
                 System.out.println("Enter your username");
                 username = s.next();
+                
+
                 System.out.println("Enter you password");
                 password = s.next();
-                hu = a.authenticate(password, username);
-                if(hu != true)
-                {
-                    System.out.println("repeat again password and username is incorrect");
-                    break;
-
+                System.out.println(a.authenticate(password, username));        
+               if(a.authenticate(password, username) == false){
+                System.out.println("WRONG LOGIN DETAILS... TRY AGAIN.");
+                
+               }
+               else{
+                if(name.equals("") == true) {
+                    System.out.println("enter your information");
+                    System.out.println("name ?");
+                    name = s.next();
+                    System.out.println("age ?");
+                    age = s.nextInt();
+                    System.out.println("Address ?");
+                    Address = s.next();
+                    System.out.println("Email ?");
+                    Email = s.next();
+                    System.out.println("phone ?");
+                    Phone = s.next();
                 }
-                System.out.println("enter your information");
-                System.out.println("name ?");
-                String name = s.next();
-                System.out.println("age ?");
-                int age = s.nextInt();
-                System.out.println("Address ?");
-                String Address = s.next();
-                System.out.println("Email ?");
-                String Email = s.next();
-                System.out.println("phone ?");
-                String Phone = s.next();
                 Profile p = new Profile(name,age,Address,Email,Phone);
-                System.out.println(p);
+
+                if(name.equals("") == false){
+                    System.out.println("welcome back");
+                    System.out.println("the following is your profile information: ");
+                    System.out.println(p);
+                    System.out.println("do you wish to update your profile ? y/n : ");
+                    String Choose = s.next();
+                    switch(Choose){
+                      case "y": 
+                        System.out.println("enter your information");
+                        System.out.println("name ?");
+                        name = s.next();
+                        System.out.println("age ?");
+                        age = s.nextInt();
+                        System.out.println("Address ?");
+                        Address = s.next();
+                        System.out.println("Email ?");
+                        Email = s.next();
+                        System.out.println("phone ?");
+                        Phone = s.next();
+                        break;
+                      case "n": 
+                        System.out.println("Press Enter key to go back to the menu....");
+                        try
+                        {
+                            System.in.read();
+                            s.nextLine();
+                        }  
+                        catch(Exception e)
+                        {}  
+                    }
+                }
+               }
+                
+                
+                
 
             break;
             case "3":
