@@ -29,123 +29,101 @@ public class myCareerApp {
         System.out.println("To Create an an Account enter 1");
         System.out.println("To Login enter 2");
         choice = s.next();
-        
-        switch (choice) {
-            case "1": // create account
-            System.out.println("please enter your username");
 
-            a.setLogin(s.next());
-                System.out.println("Please enter your password");
-
-                 a.Change_Pass(s.next());
-                System.out.println(a);
-                System.out.println("Account successfully created");
-                break;
-
-            case "2": // login
-
-                System.out.println("Enter your username");
-                username = s.next();
-                
-
-                System.out.println("Enter you password");
-                password = s.next();
-                System.out.println(a.authenticate(password, username));        
-               if(a.authenticate(password, username) == false){
-                System.out.println("WRONG LOGIN DETAILS... TRY AGAIN.");
-                
-               }
-               else{
-                if(name.equals("") == true) {
-                    System.out.println("enter your information");
-                    System.out.println("name ?");
-                    name = s.next();
-                    System.out.println("age ?");
-                    age = s.nextInt();
-                    System.out.println("Address ?");
-                    Address = s.next();
-                    System.out.println("Email ?");
-                    Email = s.next();
-                    System.out.println("phone ?");
-                    Phone = s.next();
-                    System.out.println("Employment status ? Choose the following ");
-                    Profile.status[] vals = status.values();
-                    for (status employ : vals ) {
-                        System.out.println("\t" + Profile.status.name() );
-                    }
-                   
-
-
+            switch (choice) {
+                case "1" -> { // create account
+                    System.out.println("please enter your username");
+                    a.setLogin(s.next());
+                    System.out.println("Please enter your password");
+                    a.Change_Pass(s.next());
+                    System.out.println(a);
+                    System.out.println("Account successfully created");
                 }
-                Profile p = new Profile(name,age,Address,Email,Phone);
+                case "2" -> { // login
 
-                if(name.equals("") == false){
-                    System.out.println("welcome back");
-                    System.out.println("the following is your profile information: ");
-                    System.out.println(p);
-                    System.out.println("do you wish to update your profile ? y/n : ");
-                    String Choose = s.next();
-                    Choose.toLowerCase();
-                    switch(Choose){
-                      case "y": 
-                        System.out.println("enter your information");
-                        System.out.println("name ?");
-                        name = s.next();
-                        System.out.println("age ?");
-                        age = s.nextInt();
-                        System.out.println("Address ?");
-                        Address = s.next();
-                        System.out.println("Email ?");
-                        Email = s.next();
-                        System.out.println("phone ?");
-                        Phone = s.next();
+                    System.out.println("Enter your username");
+                    username = s.next();
+                    System.out.println("Enter you password");
+                    password = s.next();
+                    System.out.println(a.authenticate(password, username));
+                    if (!a.authenticate(password, username)) {
+                        System.out.println("WRONG LOGIN DETAILS... TRY AGAIN.");
+
+                    } else {
+                        if (name.equals("")) {
+                            System.out.println("enter your information");
+                            System.out.println("name ?");
+                            name = s.next();
+                            System.out.println("age ?");
+                            age = s.nextInt();
+                            System.out.println("Address ?");
+                            Address = s.next();
+                            System.out.println("Email ?");
+                            Email = s.next();
+                            System.out.println("phone ?");
+                            Phone = s.next();
+                            System.out.println("Employment status ? Choose the following ");
+                            status[] vals = status.values();
 
 
+                        }
+                        Profile p = new Profile(name, age, Address, Email, Phone);
 
-                        break;
-                      case "n": 
-                        break;
+                        if (!name.equals("")) {
+                            System.out.println("welcome back");
+                            System.out.println("the following is your profile information: ");
+                            System.out.println(p);
+                            System.out.println("do you wish to update your profile ? y/n : ");
+                            String Choose = s.next();
+                           Choose = Choose.toLowerCase();
+                            switch (Choose) {
+                                case "y":
+                                    System.out.println("enter your information");
+                                    System.out.println("name ?");
+                                    name = s.next();
+                                    System.out.println("age ?");
+                                    age = s.nextInt();
+                                    System.out.println("Address ?");
+                                    Address = s.next();
+                                    System.out.println("Email ?");
+                                    Email = s.next();
+                                    System.out.println("phone ?");
+                                    Phone = s.next();
 
-                        
+
+                                    break;
+                                case "n":
+                                    break;
+
+
+                            }
+                            System.out.println("y/n send message ?");
+                            String Choose1 = s.next();
+                          Choose1 =  Choose1.toLowerCase();
+                            switch (Choose1) {
+                                case "y":
+
+                                    System.out.println("Enter the message that you want to create");
+                                    String message = s.next();
+                                    Message user = new Message(message, Date);
+                                    System.out.println(user);
+                                case "n":
+                                    System.out.println("Press Enter key to go back to the menu....");
+                                    try {
+                                        System.in.read();
+                                        s.nextLine();
+                                    } catch (Exception e) {
+                                    }
+                                    break;
+
+                            }
+
+                        }
                     }
-                    System.out.println("y/n send message ?");
-                    String Choose1 = s.next();
-                    Choose1.toLowerCase();
-                    switch(Choose1){
-                        case "y":
-                        
-                        System.out.println("Enter the message that you want to create");
-                        String message = s.next();
-                        Message user = new Message(message,Date);
-                        System.out.println(user);
-                        case "n":   
-                        System.out.println("Press Enter key to go back to the menu....");
-                        try
-                        {
-                            System.in.read();
-                            s.nextLine();
-                        }  
-                        catch(Exception e)
-                        {}  
-                        break;
-
-                    }
-                    
                 }
-               }
-                
-                
-                
-
-            break;
-        
-           
-            
-           
-            
-            default:
-                break;
-        }
+                default -> {
+                }
+            }
        } while (!choice.equals("0"));
     }
 
