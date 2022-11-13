@@ -1,4 +1,6 @@
-/* This program is only intended for 1 user only */
+/* This program is only intended for 1 user only 
+ * 
+*/
 import User.*;
 import Messages.*;
 import Notifications.*;
@@ -25,10 +27,6 @@ public class myCareerApp {
         System.out.println("welcome to My Career APP");
         System.out.println("To Create an an Account enter 1");
         System.out.println("To Login enter 2");
-        System.out.println("to create a message enter 3");
-        
-        
-        
         choice = s.next();
         
         switch (choice) {
@@ -69,6 +67,9 @@ public class myCareerApp {
                     Email = s.next();
                     System.out.println("phone ?");
                     Phone = s.next();
+                   
+
+
                 }
                 Profile p = new Profile(name,age,Address,Email,Phone);
 
@@ -78,6 +79,7 @@ public class myCareerApp {
                     System.out.println(p);
                     System.out.println("do you wish to update your profile ? y/n : ");
                     String Choose = s.next();
+                    Choose.toLowerCase();
                     switch(Choose){
                       case "y": 
                         System.out.println("enter your information");
@@ -91,8 +93,26 @@ public class myCareerApp {
                         Email = s.next();
                         System.out.println("phone ?");
                         Phone = s.next();
+
+
+
                         break;
                       case "n": 
+                        break;
+
+                        
+                    }
+                    System.out.println("y/n send message ?");
+                    String Choose1 = s.next();
+                    Choose1.toLowerCase();
+                    switch(Choose1){
+                        case "y":
+                        
+                        System.out.println("Enter the message that you want to create");
+                        String message = s.next();
+                        Message user = new Message(message,Date);
+                        System.out.println(user);
+                        case "n":   
                         System.out.println("Press Enter key to go back to the menu....");
                         try
                         {
@@ -101,7 +121,10 @@ public class myCareerApp {
                         }  
                         catch(Exception e)
                         {}  
+                        break;
+
                     }
+                    
                 }
                }
                 
@@ -109,15 +132,9 @@ public class myCareerApp {
                 
 
             break;
-            case "3":
-            System.out.println("Enter the message that you want to create");
-            String message = s.next();
-            Message user = new Message(message,Date);
-            System.out.println(user);
-            case "4":
-            System.out.println("enter your Updated info ");
-
-            break;
+        
+           
+            
            
             
             default:
