@@ -10,10 +10,7 @@ import Posts.*;
 import java.util.*;
 import java.util.GregorianCalendar;
 
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.event.SwingPropertyChangeSupport;
-import javax.swing.plaf.synth.SynthScrollBarUI;
-import javax.swing.plaf.synth.SynthToolTipUI;
+
 public class myCareerApp {
 
     public static void main(String[] args)
@@ -76,7 +73,7 @@ public class myCareerApp {
                             System.out.println("LATEST DEGREE ?");
                             latestDegree = s.next();
 
-                            System.out.println("DISCPLINE ?");
+                            System.out.println("DISCIPLINE ?");
                             Discipline = s.next();
                             System.out.println("GRAD YEAR ?");
                             grad_year = s.nextInt();
@@ -124,36 +121,34 @@ public class myCareerApp {
                                     System.out.println("LATEST DEGREE ?");
                                     latestDegree = s.next();
         
-                                    System.out.println("DISCPLINE ?");
+                                    System.out.println("DISCIPLINE ?");
                                     Discipline = s.next();
                                     System.out.println("GRAD YEAR ?");
                                     grad_year = s.nextInt();
                                     System.out.println("do you wish to update your employment status ? y/n \t");
                                     String employEdit = s.next();
-                                    employEdit = Choose.toLowerCase();
+                                    employEdit = employEdit.toLowerCase();
 
-                                    switch(employEdit){
-                                        case "y":
-                                        System.out.println("Employment status ? Enter the assigned numeral:   ");
-                                        EMPLOYEMENT[] values = EMPLOYEMENT.values();
-                                        int counter1 = 1;
-                                        for (EMPLOYEMENT employment : values) {
-                                            System.out.println("\t " + counter1+"- " + employment.name());
-                                                    counter1++;
+                                    switch (employEdit) {
+                                        case "y" -> {
+                                            System.out.println("Employment status ? Enter the assigned numeral:   ");
+                                            EMPLOYEMENT[] values = EMPLOYEMENT.values();
+                                            int counter1 = 1;
+                                            for (EMPLOYEMENT employment : values) {
+                                                System.out.println("\t " + counter1 + "- " + employment.name());
+                                                counter1++;
+                                            }
+                                            String employChoose = s.next();
+                                            switch (employChoose) {
+                                                case "1" -> status = EMPLOYEMENT.valueOf("EMPLOYED");
+                                                case "2" -> status = EMPLOYEMENT.valueOf("UNEMPLOYED");
+                                                case "3" -> status = EMPLOYEMENT.valueOf("COMPANYOWNER");
+                                                case "4" -> status = EMPLOYEMENT.valueOf("LOOKINGFOROFFERS");
+                                                default -> System.out.println("value not found ");
+                                            }
                                         }
-                                        
-                                        String employChoose = s.next();
-                                        switch (employChoose) {
-                                            case "1" -> status = EMPLOYEMENT.valueOf("EMPLOYED");
-                                            case "2" -> status = EMPLOYEMENT.valueOf("UNEMPLOYED");
-                                            case "3" -> status = EMPLOYEMENT.valueOf("COMPANYOWNER");
-                                            case "4" -> status = EMPLOYEMENT.valueOf("LOOKINGFOROFFERS");
-                                            default -> System.out.println("value not found ");
-                                        }
-                                        break;
-                                        case "n":
-                                            System.out.println("you chose not to update your employment status");
-                                        break;
+                                        case "n" ->
+                                                System.out.println("you chose not to update your employment status");
                                     }
                                     
                                    
@@ -180,7 +175,7 @@ public class myCareerApp {
                                         System.out.println("please enter your new password");
                                         newPass = s.next();
                                         a.Change_Pass(newPass);
-                                        System.out.println("PASSWORD CHANGED SUCCESFULLY");
+                                        System.out.println("PASSWORD CHANGED SUCCESSFULLY");
                                         break;
                                 }  
                                 else{
