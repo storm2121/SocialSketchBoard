@@ -18,7 +18,7 @@ public class myCareerApp {
         String password;
         String name = "";
         int age = 0;
-        EMPLOYEMENT status = EMPLOYEMENT.EMPLOYED; // WORKAROUND FOR USING IT BEFORE INTILIZING
+        EMPLOYEMENT status = EMPLOYEMENT.EMPLOYED; // WORKAROUND FOR USING IT BEFORE INITIALIZING
         String Address = "";
         String Email = "";
         String Phone = "";
@@ -65,33 +65,20 @@ public class myCareerApp {
                             System.out.println("phone ?");
                             Phone = s.next();
                             System.out.println("Employment status ? Enter the assigned numeral:   ");
-                            EMPLOYEMENT[] vals = EMPLOYEMENT.values();
+                            EMPLOYEMENT[] values = EMPLOYEMENT.values();
                             int counter1 = 1;
-                            for (EMPLOYEMENT employment : vals) {
+                            for (EMPLOYEMENT employment : values) {
                                 System.out.println("\t " + counter1+"- " + employment.name());
                                         counter1++;
                             }
                             
                             String employChoose = s.next();
-                            switch(employChoose){
-                                case "1":
-                                status = EMPLOYEMENT.valueOf("EMPLOYED");
-                                break;
-                                case "2":
-                                status = EMPLOYEMENT.valueOf("UNEMPLOYED");
-                                break;
-                                
-                                case "3":
-                                status = EMPLOYEMENT.valueOf("COMPANYOWNER");
-                                break;
-
-                                case "4":
-                                status = EMPLOYEMENT.valueOf("LOOKINGFOROFFERS");
-                                break;
-                                default:
-                                System.out.println("value not found ");
-                                break;
-                                
+                            switch (employChoose) {
+                                case "1" -> status = EMPLOYEMENT.valueOf("EMPLOYED");
+                                case "2" -> status = EMPLOYEMENT.valueOf("UNEMPLOYED");
+                                case "3" -> status = EMPLOYEMENT.valueOf("COMPANYOWNER");
+                                case "4" -> status = EMPLOYEMENT.valueOf("LOOKINGFOROFFERS");
+                                default -> System.out.println("value not found ");
                             }
                         }
                         Profile p = new Profile(name, age, Address, Email, Phone);

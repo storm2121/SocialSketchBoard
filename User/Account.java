@@ -24,12 +24,7 @@ public class Account {
     // method Authenticate
     public boolean authenticate(String newPassword,String newLogin)
     {
-        if((this.password.equals(newPassword))&& (this.login.equals(newLogin)))
-        {
-            return true;
-        }
-        else 
-        return false;
+        return (this.password.equals(newPassword)) && (this.login.equals(newLogin));
         
     }
     @Override
