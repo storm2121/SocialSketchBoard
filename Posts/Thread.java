@@ -1,5 +1,5 @@
 package Posts;
-
+// we chose not to implement the method sort remove view
 public class Thread {
     // thread needs methods view() sort() remove()
     public void View_posts()

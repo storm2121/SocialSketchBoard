@@ -1,5 +1,6 @@
 package Posts;
 import java.util.GregorianCalendar;
+// we chose to not implement the post class 
 public class Post {
     GregorianCalendar Date = new GregorianCalendar();
     public String Post;
