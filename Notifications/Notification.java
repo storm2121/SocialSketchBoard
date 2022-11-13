@@ -6,7 +6,7 @@ public class Notification {
     GregorianCalendar Date = new GregorianCalendar();
     public String text;
 
-    public Notification(String text,GregorianCalendar Date) {
+    public Notification(String text,GregorianCalendar Date) { // constructor
         this.text = text;
         this.Date = Date;
     }

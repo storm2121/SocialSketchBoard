@@ -2,12 +2,12 @@ package Posts;
 
 import java.util.GregorianCalendar;
 
-public class Job_Op_Post extends Post {
+public class Job_Op_Post extends Post {     // extends keyword because we have inheritance
     public String Job_title;
     public double Salary;
 
    public Job_Op_Post(String Post,String job_title, double salary,GregorianCalendar Date) { // constructor
-        super(Post,Date); //comment
+        super(Post,Date); // super keyword 
         this.Job_title = job_title;
         this.Salary = salary;
         // for date soon™

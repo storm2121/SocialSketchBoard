@@ -1,7 +1,12 @@
-/* This program is only intended for 1 user only 
- * 
+/* Dear professor in this program i assume  that there is only 1 user 
+we have 4 packages called User,Notifications,Post,Messages
+This program is only intended for 1 user only not a company 
+we are assuming that the user will create an account then login
+we are using a menu that have login create an account then fill his educational info 
+for the enumerated type we added a class for enumerated type that has just status information
+we didn't do the implementation for the class company
 */
-import User.*;
+import User.*;                  // importing classes
 import User.Profile;
 import User.EMPLOYEMENT;
 import Messages.*;
@@ -15,11 +20,11 @@ public class myCareerApp {
 
     public static void main(String[] args)
     {  
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);         // declared attributes
         String username;
         String password;
         String name = "";
-        String latestDegree = "";
+        String latestDegree = "";       // this is a workaround for initializing 
         String Discipline = "";
         int    grad_year = 0;
         int age = 0;
@@ -29,7 +34,7 @@ public class myCareerApp {
         String Phone = "";
         String choice;
         Account a = new Account("","");
-        GregorianCalendar Date = new GregorianCalendar();
+        GregorianCalendar Date = new GregorianCalendar();       // our menu
         do{ 
         System.out.println("********************************************************");
         System.out.println("welcome to My Career APP");
@@ -57,7 +62,7 @@ public class myCareerApp {
                     if (!a.authenticate(password, username)) {
                         System.out.println("WRONG LOGIN DETAILS... TRY AGAIN.");
 
-                    } else {
+                    } else {                                // create profile 
                         if (name.equals("")) {
                             System.out.println("enter your information");
                             System.out.println("name ?");
@@ -95,10 +100,10 @@ public class myCareerApp {
                                 default -> System.out.println("value not found ");
                             }
                         }
-                        Profile p = new Profile(name, age, Address, Email, Phone);
-                        Educational_info e = new Educational_info(latestDegree, Discipline, grad_year);
+                        Profile p = new Profile(name, age, Address, Email, Phone);  // create profile object 
+                        Educational_info e = new Educational_info(latestDegree, Discipline, grad_year); // create an educational info object
 
-                        if (!name.equals("")) {
+                        if (!name.equals("")) {             // this is if the user has an account already
                             System.out.println("welcome back");
                             System.out.println("the following is your profile information: ");
                             System.out.println(p + "" + e + "Status: " + status.name());
@@ -129,7 +134,7 @@ public class myCareerApp {
                                     String employEdit = s.next();
                                     employEdit = employEdit.toLowerCase();
 
-                                    switch (employEdit) {
+                                    switch (employEdit) {       // this is to change the employ status 
                                         case "y" -> {
                                             System.out.println("Employment status ? Enter the assigned numeral:   ");
                                             EMPLOYEMENT[] values = EMPLOYEMENT.values();
@@ -158,13 +163,13 @@ public class myCareerApp {
                                 case "n":
                                     break;
                             }
-                            System.out.println("Do you wish to update your password ?  y/n");
+                            System.out.println("Do you wish to update your password ?  y/n");       // update the password
                             Choose = s.next();
 
                             Choose = Choose.toLowerCase();
                             switch(Choose){
                                 case "y":
-                                int maxTries = 5;
+                                int maxTries = 3;
                                 System.out.println("Please enter your old password:");
                                 String oldPassword = s.next();
                                 String newPass;
@@ -185,7 +190,7 @@ public class myCareerApp {
                                     maxTries--;
                                     oldPassword = s.next();
 
-                                    if(maxTries == 0){
+                                    if(maxTries == 0){          // if the user has tried 3 times then he will get out of the menu
                                         System.out.println("YOU HAVE CONSUMED ALL YOUR PASSWORD CHANGE TRIES, TRY AGAIN LATER");
                                     }
                                 }       
@@ -198,7 +203,7 @@ public class myCareerApp {
                                 break;
                             }
                                 
-                            System.out.println("y/n send message ?");
+                            System.out.println("y/n send message ?");       // the user chosses if he want to send a message 
                             String Choose1 = s.next();
                           Choose1 =  Choose1.toLowerCase();
                             switch (Choose1) {
@@ -207,7 +212,7 @@ public class myCareerApp {
                                     System.out.println("Enter the message that you want to create");
                                     String message = s.next();
                                     Message user = new Message(message, Date);
-                                    System.out.println(user);
+                                    System.out.println(user);       // call to string method
                                 case "n":
                                     System.out.println("Press Enter key to go back to the menu...."); /// to go back to the menu
                                     try {

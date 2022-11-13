@@ -7,7 +7,7 @@ public class Profile {
     public String Email;
     public String Phone;
 
-    public Profile(String name, int age, String address, String email, String phone) 
+    public Profile(String name, int age, String address, String email, String phone) // constructor
     {
         this.Name = name;
         this.Age = age;
@@ -18,7 +18,7 @@ public class Profile {
 
    
 
-    public void updateProfile(String name, int age, String address, String email, String phone) 
+    public void updateProfile(String name, int age, String address, String email, String phone) // method
     {
         this.Name = name;
         this.Age = age;

@@ -5,7 +5,7 @@ public class Form {
     public String Experience;
     public String Skills;
     
-    public Form(String education, String experience, String skills) {
+    public Form(String education, String experience, String skills) { // constructor
         this.Education = education;
         this.Experience = experience;
         this.Skills = skills;

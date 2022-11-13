@@ -1,5 +1,5 @@
 package User;
-
+// we chose to not implement it 
 public class Company {
     public String Name;
     public String Description;
