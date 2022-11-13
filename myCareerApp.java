@@ -2,6 +2,7 @@
  * 
 */
 import User.*;
+import User.Profile.status;
 import Messages.*;
 import Notifications.*;
 import Posts.*;
@@ -67,6 +68,11 @@ public class myCareerApp {
                     Email = s.next();
                     System.out.println("phone ?");
                     Phone = s.next();
+                    System.out.println("Employment status ? Choose the following ");
+                    Profile.status[] vals = status.values();
+                    for (status employ : vals ) {
+                        System.out.println("\t" + Profile.status.name() );
+                    }
                    
 
 
