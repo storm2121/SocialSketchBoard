@@ -1,5 +1,0 @@
-package User;
-
-public enum Education {
-    HUMANITIES,COMPUTER_SCIENCE,BUSINESS_ADMINISTRATION,AI,PSYCHOLOGY
-}

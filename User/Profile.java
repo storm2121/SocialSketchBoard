@@ -6,9 +6,6 @@ public class Profile {
     public String Address;
     public String Email;
     public String Phone;
-    public enum status{
-        EMPLOYED,UNEMPLOYED,COMPANYOWNER,LOOKINGFOROFFERS
-    }
 
     public Profile(String name, int age, String address, String email, String phone) 
     {
