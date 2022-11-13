@@ -27,6 +27,10 @@ public class Account {
         return (this.password.equals(newPassword)) && (this.login.equals(newLogin));
         
     }
+    
+    public boolean authenticate(String newPassword){// WE OVERRIDE TO USE IT TO CHECK WHEN WE WANT TO CHANGE OUR PASSWORD (WE HAVE TO ENTER OLD PASSWORD FIRST TO VERIFY)
+        return (this.password.equals(newPassword));
+    }
     @Override
     public String toString() {
         return "Account [login=" + login + ", password=" + password + "]";
