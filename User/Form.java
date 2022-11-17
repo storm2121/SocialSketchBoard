@@ -5,28 +5,16 @@ public class Form {
     public String Experience;
     public String Skills;
     
-    public Form(String education, String experience, String skills) {
+    public Form(String education, String experience, String skills) { // constructor
         this.Education = education;
         this.Experience = experience;
         this.Skills = skills;
     }
-    public String getEducation() {
-        return Education;
+
+    @Override
+    public String toString() {
+        return "Form [Education=" + Education + ", Experience=" + Experience + ", Skills=" + Skills + "]";
     }
-    public void setEducation(String education) {
-        this.Education = education;
-    }
-    public String getExperience() {
-        return Experience;
-    }
-    public void setExperience(String experience) {
-        this.Experience = experience;
-    }
-    public String getSkills() {
-        return Skills;
-    }
-    public void setSkills(String skills) {
-        this.Skills = skills;
-    }
+   
     
 }

@@ -4,7 +4,7 @@ public class Account {
     private String login;
     private String password;
     // constructor Account
-    public Account(String login, String password) {
+    public Account(String login , String password) { 
         this.login = login;
         this.password = password;
     }
@@ -24,12 +24,16 @@ public class Account {
     // method Authenticate
     public boolean authenticate(String newPassword,String newLogin)
     {
-        if((password.equals(newPassword)) && (login.equals(newLogin)))
-        {
-            return true;
-        }
-        return false;
-
+        return (this.password.equals(newPassword)) && (this.login.equals(newLogin));
+        
+    }
+    
+    public boolean authenticate(String newPassword){// WE OVERRIDE TO USE IT TO CHECK WHEN WE WANT TO CHANGE OUR PASSWORD (WE HAVE TO ENTER OLD PASSWORD FIRST TO VERIFY)
+        return (this.password.equals(newPassword));
+    }
+    @Override
+    public String toString() {
+        return "Account [login=" + login + ", password=" + password + "]";
     }
 
 

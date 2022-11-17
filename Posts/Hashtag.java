@@ -8,16 +8,9 @@ public class Hashtag {
         this.Hashtag = hashtag;
     }
 
-    public String getHashtag() {
-        return Hashtag;
+    @Override
+    public String toString() {
+        return "Hashtag [Hashtag=" + Hashtag + "]";
     }
-
-    public void setHashtag(String hashtag) {
-        Hashtag = hashtag;
-    }
-
-    
-
-
 
 }
