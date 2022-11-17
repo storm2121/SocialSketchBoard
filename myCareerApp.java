@@ -4,7 +4,7 @@ This program is only intended for 1 user only not a company
 we are assuming that the user will create an account then login
 we are using a menu that have login create an account then fill his educational info 
 for the enumerated type we added a class for enumerated type that has just status information
-we didn't do the implementation for the class company
+we didn't do the implementation for the class company as we only assume a user of type account not a company
 */
 import User.*;                  // importing classes
 import User.Profile;
