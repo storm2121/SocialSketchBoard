@@ -1,5 +1,5 @@
 package User;
-
+// we chose to not implement it 
 public class Company {
     public String Name;
     public String Description;
@@ -10,22 +10,10 @@ public class Company {
         this.Description = Description;
         this.Activity = Activity;
     }
-    public String getDescription() {
-        return Description;
+
+    @Override
+    public String toString() {
+        return "Company [Name=" + Name + ", Description=" + Description + ", Activity=" + Activity + "]";
     }
-    public void setDescription(String description) {
-        this.Description = description;
-    }
-    public String getActivity() {
-        return Activity;
-    }
-    public void setActivity(String activity) {
-        this.Activity = activity;
-    }
-    public String getName() {
-        return Name;
-    }
-    public void setName(String name) {
-        this.Name = name;
-    }
+   
 }

@@ -1,19 +1,21 @@
 package Posts;
-
+import java.util.GregorianCalendar;
+// we chose to not implement the post class 
 public class Post {
-    
+    GregorianCalendar Date = new GregorianCalendar();
     public String Post;
 
 
-    public Post(String post) {
+    public Post(String post,GregorianCalendar Date) {
         this.Post = post;
-    }
-    public String getPost() {
-        return Post;
+        this.Date = Date;
     }
 
-    public void setPost(String post) {
-        this.Post = post;
+
+    @Override
+    public String toString() {
+        return "Post [Post=" + Post + "]";
     }
+    
     
 }

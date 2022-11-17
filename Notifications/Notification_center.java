@@ -3,10 +3,10 @@ package Notifications;
 public class Notification_center {
     public void View_notifications()
     {
-        // not covered yet
+        // we chose to not implement them as there are not many users in the program
     }
     public void Remove_notif(){
-        // not covered yet
+        
     }
 }
 

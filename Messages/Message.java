@@ -1,20 +1,23 @@
 package Messages;
-// this is my change to the project
-// this is my 2nd change to the project
-import java.util.*;
 import java.util.GregorianCalendar;
-
 public class Message {
-    //GregorianCalendar date  = new GregorianCalendar();
-    // date = Date_time;
+    GregorianCalendar Date = new GregorianCalendar();
+    public static int nMessages = 0;
+   
+    
      public String Message;
 
-    public String getMessage() {
-        return Message;
+    public Message(String message,GregorianCalendar Date) {
+        Message = message;
+        this.Date = Date;
+        
     }
 
-    public void setMessage(String message) {
-        this.Message = message;
+    @Override
+    public String toString() {
+        return "Message [Message=" + Message + "]";
     }
+
+   
     
 }
